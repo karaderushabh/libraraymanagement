@@ -1,0 +1,35 @@
+<div *ngIf="this.completezero == true">
+  <h2 id="nodataheading">Book List</h2>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Book Name</th>
+        <th scope="col">Author Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let b of book; let i = index">
+        <td *ngIf="b.iscompleted == 1">{{ i + 1 }}</td>
+        <td *ngIf="b.iscompleted == 1">{{ b.bookname }}</td>
+        <td *ngIf="b.iscompleted == 1">{{ b.authorname }}</td>
+        <td *ngIf="b.iscompleted == 1">
+          <button class="btn btn-danger" (click)="remove(b)">Remove</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<br />
+<br />
+<br />
+<div
+  *ngIf="this.completezero == false"
+  class="mx-auto w-50 p-5 bg-dark text-white text-center"
+>
+  <span
+    >There are no books in your Completed list. <br />
+    You can add it here from
+    <a routerLink="/userdashboard">User dashboard</a> page</span
+  >
+</div>

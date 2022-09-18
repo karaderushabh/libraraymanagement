@@ -1,0 +1,29 @@
+<div>
+  <h2 id="nodataheading" *ngIf="book.length == 0">Book List</h2>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Book Name</th>
+        <th scope="col">Author Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let b of book; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td>{{ b.bookname }}</td>
+        <td>{{ b.authorname }}</td>
+        <td>
+          <button (click)="addtowish(b)" class="btn btn-primary">
+            Add to Wish List
+          </button>
+        </td>
+        <td>
+          <button (click)="addtocompleted(b)" class="btn btn-primary">
+            Add to Completed List
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
