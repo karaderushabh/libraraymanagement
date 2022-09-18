@@ -24,6 +24,8 @@
 
 2. Run the spring boot project on port 8080, this will create tables in your DB(using JPA). Once tables are created run the SQL commands provided in data.sql file.
 
-3. Now run the angular project(on port 4200) and in browser you can view the project on localhost:4200
+3. Please add node modules inside the angular project folder and install bootstrap
+
+4. Now run the angular project(on port 4200) and in browser you can view the project on localhost:4200
 
 
